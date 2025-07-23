@@ -46,6 +46,13 @@ body{
     justify-content: center;
     margin: 0 auto;
     padding: 16px 30px;
+    flex-direction: column;
+    gap: 7.5em;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 7.5em;
 }
 /* Navigation */
 nav{
@@ -74,12 +81,71 @@ nav ul{
     justify-content: center;
     align-items: center;
 }
-/* navigation for mobile */
+
+/* hero section */
+.hero-section{
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.hero-section img{
+    height: 355px;
+}
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.title{
+    font-size: 4em;
+    font-weight: bold;
+    font-family: "Noto Serif", serif;
+
+}
+.title span{
+    color: #E95A08;
+}
+.description{
+    font-size: 1.4em;
+    font-family: "Inter", sans-serif;
+}
+/* Plant section */
+.plant-section{
+    text-align: center;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.card-container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2em;
+    column-gap: 1em;
+    justify-content: center;
+    
+}
+.card-title, .card-price{
+    font-size: 1.4em;
+    margin: .4em 0;
+}
+.card-button{
+    color: white;
+    background-color: #E95A08;
+    border: none;
+    font-size: 1em;
+    padding: 20px 80px;
+
+}
+/* responsive for mobile */
 @media screen and (max-width:576px) {
     .logo img{
         height: 38px;
     }
     .hide{
         display: none;
+    }
+    .hero-section{
+        flex-direction: column;
     }
 }
