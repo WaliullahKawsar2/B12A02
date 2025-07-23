@@ -10,7 +10,9 @@
 .roboto-font {
   font-family: "Roboto", sans-serif;
 }
-
+.bold{
+    font-weight: bold;
+}
 /* colors */
 .orange{
     color: #E95A08;
@@ -23,4 +25,49 @@
 }
 .light-gray{
     color: #8987A1;
+}
+.black{
+    color: black;
+}
+.white{
+    color: white;
+}
+/* common styles */
+.flex{
+    display: flex;
+}
+/* Main style */
+body{
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+/* Navigation */
+nav{
+    display: flex;
+    width: 1140px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto 0;
+
+}
+.logo{
+    height: 70px;
+    background-size: cover;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    font-size: 14px;
+
+} 
+.cart{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
