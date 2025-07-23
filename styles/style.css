@@ -182,6 +182,41 @@ nav ul{
     gap: 1.2em;
     flex-direction: column;
 }
+/* Latest deals */
+
+.latest-deals{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1140px;
+    text-align: center;
+    margin: 0 auto;
+}
+.image1{
+    grid-area: image1;
+}
+.image2{
+    grid-area: image2;
+}
+.image3{
+    grid-area: image3;
+}
+.image-container{
+    display: grid;
+    grid-template-areas: 
+        'image1 image2 image2'
+        'image3 image2 image2';
+    gap: 1.7em;
+}
+.image-container img{
+    border-radius: 1em;
+    height: 100%;
+}
+.deal-description{
+    margin: 2rem 0;
+}
+
 /* responsive for mobile */
 @media screen and (max-width:850px) {
     *{
@@ -253,5 +288,21 @@ nav ul{
 }
 .seller-text{
     padding: 0 1em;
+}
+.deal-description{
+    margin: .1rem 0;
+}
+.image-container{
+    gap: 1rem;
+    grid-template-areas: 
+        'image1'
+        'image2'
+        'image3';
+        padding: 1rem;
+}
+.image-container img{
+    border-radius: 1em;
+    height:auto;
+    width: 100%;
 }
 }
