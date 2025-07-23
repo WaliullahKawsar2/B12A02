@@ -45,9 +45,9 @@ body{
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    padding: 16px 30px;
     flex-direction: column;
     gap: 7.5em;
+    padding: 0 1em;
 }
 main{
     display: flex;
@@ -57,10 +57,11 @@ main{
 /* Navigation */
 nav{
     display: flex;
-    width: 1140px;
+    max-width: 1140px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin: 30px auto 0;
+    margin: 30px auto;
 
 }
 .logo img{
@@ -90,9 +91,11 @@ nav ul{
     margin: 0 auto;
 }
 .hero-section img{
+    flex-grow: 1;
     height: 355px;
 }
 .hero-text{
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -135,17 +138,120 @@ nav ul{
     border: none;
     font-size: 1em;
     padding: 20px 80px;
+    cursor: pointer;
 
 }
+/* seller-section  */
+.seller-section{
+    display: flex;
+    margin-top: 13em;
+    max-width: 1140px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+
+}
+.seller-images{
+    position: relative;
+}
+.seller-section .flower-img{
+    width: 540px;
+}
+.badge{
+    position: absolute;
+    width: 10em;
+    transform: translate(-100px,-55px);
+}
+.seller-section{
+    display: flex;
+}
+.seller-title{
+    font-size: 3em;
+    max-width: 540px;
+    font-family: "Noto Serif", serif;
+    font-weight: bold;
+}
+.seller-text{
+    text-align: left;
+}
+.seller-text li{
+    font-size: 1.2em;
+}
+.list{
+    display: flex;
+    gap: 1.2em;
+    flex-direction: column;
+}
 /* responsive for mobile */
-@media screen and (max-width:576px) {
-    .logo img{
-        height: 38px;
+@media screen and (max-width:850px) {
+    *{
+        margin: 0;
+        box-sizing: border-box;
     }
+    body{
+        max-width: 100vw;
+        padding: 0;
+    }
+    main{
+        gap: 2em;
+    }
+    nav{
+        width:100%;
+        margin: 0;
+        padding: 1em;
+    }
+
     .hide{
         display: none;
     }
     .hero-section{
-        flex-direction: column;
+        flex-direction: column ;
     }
+    .hero-section img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .title{
+    font-size: 1.5em;
+    padding: 0 1em;
+    margin: 1em;
+}
+.description{
+     padding: 0 1em;
+    font-size: 1em;
+}
+    .plant-section{
+    text-align: center;
+    max-width: 1140px;
+    margin: 0;
+}
+    .card-container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card img{
+    width: 10em;
+}
+.card-button{
+    font-size: 1em;
+    padding: 1em 2em;
+
+
+}
+.seller-section{
+    flex-direction: column;
+}
+.badge{
+    display: none;
+}
+.seller-section .flower-img{
+    width: 100%;
+    padding: 1em;
+}
+.seller-text{
+    padding: 0 1em;
+}
 }
