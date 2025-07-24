@@ -160,7 +160,8 @@ nav ul{
 .badge{
     position: absolute;
     width: 15em;
-    transform: translate(-130px,-110px);
+    top: -110px;
+    right: -100px;
 }
 .seller-section{
     display: flex;
@@ -316,7 +317,9 @@ footer{
 .footer-right img{
     width: 2em;
     height: 2em;
+    cursor: pointer;
 }
+
 /* responsive for mobile */
 @media screen and (max-width:850px) {
     *{
@@ -349,7 +352,6 @@ footer{
 
     .title{
         font-size: 1.5em;
-        padding: 0 1em;
         margin: 1em;
     }
     .description{
@@ -469,4 +471,34 @@ footer{
 .deal-description{
     margin: 2rem 0;
 }
+}
+
+/* final touch */
+li, button{
+    cursor: pointer;
+}
+li:hover{
+    color: #E95A08;
+}
+a:hover{
+    color: #E95A08;
+}
+button:hover{
+    color: black;
+    background-color: #e95a08bc;
+}
+input:focus{
+    outline: none;
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.badge{
+    animation: rotating 10s linear infinite;
+
 }
