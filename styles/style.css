@@ -470,14 +470,17 @@ footer{
 
 .deal-description{
     margin: 2rem 0;
-}
+    }
 }
 
-/* final touch */
-li, button{
+
+
+
+/* Final touch */
+nav li,footer li, button{
     cursor: pointer;
 }
-li:hover{
+nav li:hover, footer li:hover{
     color: #E95A08;
 }
 a:hover{
@@ -492,13 +495,15 @@ input:focus{
 }
 @keyframes rotating {
   from {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 .badge{
+    -webkit-animation: rotating 2s linear infinite;
     animation: rotating 10s linear infinite;
-
 }
