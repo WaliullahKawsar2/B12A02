@@ -37,17 +37,17 @@
     display: flex;
 }
 /* Main style */
+
 html{
     background-color: #F5F8FF;
 }
 body{
-    max-width: 1440px;
+    max-width: 100vw;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     flex-direction: column;
     gap: 7.5em;
-    /* padding: 0 1em; */
 }
 main{
     display: flex;
@@ -144,11 +144,11 @@ nav ul{
 /* seller-section  */
 .seller-section{
     display: flex;
-    margin-top: 13em;
     max-width: 1140px;
     justify-content: space-between;
     align-items: center;
     gap: 3em;
+    margin: .5em auto 0 ;
 
 }
 .seller-images{
@@ -159,8 +159,8 @@ nav ul{
 }
 .badge{
     position: absolute;
-    width: 10em;
-    transform: translate(-100px,-55px);
+    width: 15em;
+    transform: translate(-130px,-110px);
 }
 .seller-section{
     display: flex;
@@ -193,88 +193,66 @@ nav ul{
     text-align: center;
     margin: 0 auto;
 }
-.image1{
-    grid-area: image1;
-    background-image: url("/assets/deal-bloom.png");
-    background-repeat: no-repeat;
-    border-radius: 1em;
-    background-size: cover;
-    background-position: center;
-}
-.image1::before{
-    content: "";
-    background-color: rgb(32, 15, 49);
-    z-index: 1;
-     inset: 0;
-}
-.image2{
-    grid-area: image1;
-    background-image: url("/assets/deal-bloom.png");
-    background-repeat: no-repeat;
-    border-radius: 1em;
-    background-size: cover;
-    background-position: center;
-}
-.image2::before{
-    content: "";
-    background-color: rgb(32, 15, 49);
-    z-index: 1;
-     inset: 0;
-}
-
-.image3{
-    grid-area: image1;
-    background-image: url("/assets/deal-bloom.png");
-    background-repeat: no-repeat;
-    border-radius: 1em;
-    background-size: cover;
-    background-position: center;
-}
-.image3::before{
-    content: "";
-    background-color: rgb(32, 15, 49);
-    z-index: 1;
-     inset: 0;
-}
-/* .image2{
-    grid-area: image2;
-}
-.image3{
-    grid-area: image3;
-}
 .image-container{
     display: grid;
-    grid-template-areas: 
-        'image1 image2 image2'
-        'image3 image2 image2';
-    gap: 1.7em;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(auto,minmax(250,1fr));
+    grid-template-rows: dense;
 }
-.image-container img{
+.image-container > div{
+   display: flex;
+   justify-content: center;
+   align-self: center;
+}
+.image-container > img{
+    max-width: 100%;
     height: 100%;
-} */
+    object-fit: cover;
+}
+.image1, .image2, .image3{
+    position: relative;
+    border-radius: 1em;
+    overflow: hidden;
+}
+.image-overlay{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4em;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.image-overlay a{
+    color: white;
+}
+
 .deal-description{
     margin: 2rem 0;
 }
 /* Join section */
 
 
-
-.join-section{
-    background-image: url("/assets/news-letter-bg.png");
-    max-width: 100vw;
-    width: 100%;
-    /* padding: 15em; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    margin: 0;
-    /* max-height: 20em; */
+.join-bg{
+    position: relative;
 }
-.news-letter-bg{
+.join-bg img{
+    width: 100%;
+}
+.join-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 .join-title{
     font-size: 4em;
@@ -283,17 +261,20 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:#E95A08;
+    max-width: 700px;
 }
 .input-section input{
     font-size: 1.5em;
     padding: .5em;
+    width: 25em;
 }
 .input-button{
     color: white;
     background-color: #E95A08;
     border: none;
     font-size: 1em;
-    padding: 1em 4em;
+    padding: 1em 3em;
     cursor: pointer;
 }
 /* Footer section */
@@ -356,72 +337,82 @@ footer{
     }
 
     .title{
-    font-size: 1.5em;
-    padding: 0 1em;
-    margin: 1em;
-}
-.description{
-     padding: 0 1em;
-    font-size: 1em;
-}
+        font-size: 1.5em;
+        padding: 0 1em;
+        margin: 1em;
+    }
+    .description{
+        padding: 0 1em;
+        font-size: 1em;
+    }
     .plant-section{
-    text-align: center;
-    max-width: 1140px;
-    margin: 0;
-}
+        text-align: center;
+        max-width: 1140px;
+        margin: 0;
+    }
     .card-container{
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
     
+    }
+    .card img{
+        width: 10em;
+    }
+    .card-button{
+        font-size: 1em;
+        padding: 1em 2em;
+    }
+    .seller-section{
+        flex-direction: column;
+    }
+    .badge{
+        display: none;
+    }
+    .seller-section .flower-img{
+        width: 100%;
+        padding: 1em;
+    }
+    .seller-text{
+        padding: 0 1em;
+    }
+    .deal-description{
+        margin: .1rem 0;
+    }
+    .image-container{
+        gap: 1rem;
+        grid-template-areas: 
+            'image1'
+            'image2'
+            'image3';
+            padding: 1rem;
+    }
+    .image-container img{
+        border-radius: 1em;
+        height:auto;
+        width: 100%;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .footer-menu{
+        flex-direction: column;
+        gap: 2em;
+        margin: 2em 0;
+    }
+    .footer-left, .footer-right{
+        margin-left: 30px;
+    }
+    .image-container{
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(auto,minmax(250,1fr));
+    grid-template-rows: dense;
 }
-.card img{
-    width: 10em;
+.join-title{
+    font-size: 1.5em;
 }
-.card-button{
-    font-size: 1em;
-    padding: 1em 2em;
-
-
-}
-.seller-section{
-    flex-direction: column;
-}
-.badge{
-    display: none;
-}
-.seller-section .flower-img{
-    width: 100%;
-    padding: 1em;
-}
-.seller-text{
-    padding: 0 1em;
-}
-.deal-description{
-    margin: .1rem 0;
-}
-.image-container{
-    gap: 1rem;
-    grid-template-areas: 
-        'image1'
-        'image2'
-        'image3';
-        padding: 1rem;
-}
-.image-container img{
-    border-radius: 1em;
-    height:auto;
-    width: 100%;
-}
-footer{
-    flex-direction: column;
-}
-.footer-menu{
-    flex-direction: column;
-    gap: 2em;
-    margin: 2em 0;
-}
-.footer-left, .footer-right{
-    margin-left: 30px;
+.input-section{
+    transform: scale(.5);
 }
 }
